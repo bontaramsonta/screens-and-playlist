@@ -1,7 +1,6 @@
 import { createRouter } from '@tanstack/react-router'
 import { setupRouterSsrQueryIntegration } from '@tanstack/react-router-ssr-query'
 import * as TanstackQuery from './integrations/tanstack-query/root-provider'
-import { AuthProvider } from './contexts/auth-context'
 
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
@@ -17,7 +16,7 @@ export const getRouter = () => {
     Wrap: (props: { children: React.ReactNode }) => {
       return (
         <TanstackQuery.Provider {...rqContext}>
-          <AuthProvider>{props.children}</AuthProvider>
+          {props.children}
         </TanstackQuery.Provider>
       )
     },

@@ -19,7 +19,7 @@ export const Route = createFileRoute('/api/screens/$id')({
         try {
           const body = await request.json()
           const { isActive } = body
-          const screenId = (params as any).id // TypeScript workaround for params
+          const screenId = params.id
 
           // Find the screen
           const screen = screens.find((s) => s._id === screenId)

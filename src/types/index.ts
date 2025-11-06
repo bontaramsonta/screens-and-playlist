@@ -71,13 +71,3 @@ export interface PaginatedResponse<T> {
 export interface ApiError {
   error: string
 }
-
-// Auth context types
-export interface AuthContextType {
-  user: User | null
-  token: string | null
-  login: (email: string, password: string) => Promise<void>
-  logout: () => void
-  isAuthenticated: boolean
-  isLoading: boolean
-}

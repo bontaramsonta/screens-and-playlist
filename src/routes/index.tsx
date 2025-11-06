@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect } from 'react'
 
-import { useAuth } from '../contexts/auth-context'
+import { useAuth } from '../hooks/use-auth'
 
 export const Route = createFileRoute('/')({
   component: App,
